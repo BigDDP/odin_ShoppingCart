@@ -1,0 +1,74 @@
+{
+  "gelPen": {
+    "id": 198,
+    "cost": 2.5,
+    "description": "Smooth-flowing 0.5mm gel ink pen with a comfortable rubber grip.",
+    "title": "Gel Pen",
+    "image": "https://placehold.co/400x400/3B82F6/3B82F6.png",
+    "stockCount": 120
+  },
+  "spiralNotebook": {
+    "id": 579,
+    "cost": 6.99,
+    "description": "A5 spiral-bound notebook with 120 lined pages and a durable cover.",
+    "title": "Spiral Notebook",
+    "image": "https://placehold.co/400x400/F97316/F97316.png",
+    "stockCount": 45
+  },
+  "highlighterSet": {
+    "id": 847,
+    "cost": 8.75,
+    "description": "Set of 6 chisel-tip highlighters in bright, fade-resistant colours.",
+    "title": "Highlighter Set",
+    "image": "https://placehold.co/400x400/FACC15/FACC15.png",
+    "stockCount": 30
+  },
+  "mechanicalPencil": {
+    "id": 759,
+    "cost": 4.2,
+    "description": "0.7mm mechanical pencil with a retractable tip and built-in eraser.",
+    "title": "Mechanical Pencil",
+    "image": "https://placehold.co/400x400/6B7280/6B7280.png",
+    "stockCount": 80
+  },
+  "stickyNotes": {
+    "id": 518,
+    "cost": 3.49,
+    "description": "Pack of 5 pads of 76x76mm sticky notes, 100 sheets each.",
+    "title": "Sticky Notes",
+    "image": "https://placehold.co/400x400/EC4899/EC4899.png",
+    "stockCount": 200
+  },
+  "stapler": {
+    "id": 281,
+    "cost": 12,
+    "description": "Desktop stapler that binds up to 25 sheets, with a no-jam mechanism.",
+    "title": "Stapler",
+    "image": "https://placehold.co/400x400/EF4444/EF4444.png",
+    "stockCount": 18
+  },
+  "fountainPen": {
+    "id": 970,
+    "cost": 24.99,
+    "description": "Classic fountain pen with a fine steel nib and refillable converter.",
+    "title": "Fountain Pen",
+    "image": "https://placehold.co/400x400/1E3A8A/1E3A8A.png",
+    "stockCount": 12
+  },
+  "ruler": {
+    "id": 934,
+    "cost": 1.99,
+    "description": "30cm shatter-resistant clear ruler with metric and imperial markings.",
+    "title": "Ruler",
+    "image": "https://placehold.co/400x400/14B8A6/14B8A6.png",
+    "stockCount": 95
+  },
+  "washiTape": {
+    "id": 295,
+    "cost": 5.5,
+    "description": "Set of 4 decorative washi tape rolls, easy to tear and reposition.",
+    "title": "Washi Tape",
+    "image": "https://placehold.co/400x400/A855F7/A855F7.png",
+    "stockCount": 0
+  }
+}
