@@ -12,8 +12,9 @@ import {
 import { Input } from "@/components/ui/input";
 import { useItems, type Item } from "@/hooks/fetch";
 import { useCart } from "@/hooks/use-cart";
+import { clampCount, formatPrice } from "@/lib/cart";
 
-const ItemCard = ({ item }: { item: Item }) => {
+export const ItemCard =({ item }: { item: Item }) => {
   const { uniqueItems, setCart } = useCart();
 
   const countInCart =
@@ -24,9 +25,7 @@ const ItemCard = ({ item }: { item: Item }) => {
   const [quantity, setQuantity] = useState(Math.min(1, remaining));
 
   const updateQuantity = (count: number) =>
-    setQuantity(
-      Math.min(Math.max(Number.isNaN(count) ? 0 : count, 0), remaining),
-    );
+    setQuantity(clampCount(count, remaining));
 
   const addToCart = () => {
     setCart(item, countInCart + quantity);
@@ -47,7 +46,7 @@ const ItemCard = ({ item }: { item: Item }) => {
         <CardDescription>{item.description}</CardDescription>
       </CardHeader>
       <CardFooter className="justify-between gap-2">
-        <span className="font-semibold">${item.cost.toFixed(2)}</span>
+        <span className="font-semibold">{formatPrice(item.cost)}</span>
         <div className="flex items-center gap-1">
           <Input
             type="number"

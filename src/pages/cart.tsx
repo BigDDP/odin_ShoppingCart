@@ -10,18 +10,14 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { useCart, type CartLine } from "@/hooks/use-cart";
+import { clampCount, formatPrice } from "@/lib/cart";
 
-const formatPrice = (amount: number) => `$${amount.toFixed(2)}`;
-
-const CartRow = ({ line }: { line: CartLine }) => {
+export const CartRow = ({ line }: { line: CartLine }) => {
   const { setCart, removeFromCart } = useCart();
   const { item, count } = line;
 
   const updateCount = (value: number) =>
-    setCart(
-      item,
-      Math.min(Math.max(Number.isNaN(value) ? 0 : value, 0), item.stockCount),
-    );
+    setCart(item, clampCount(value, item.stockCount));
 
   return (
     <Card>
@@ -92,7 +88,7 @@ const CartItems = () => {
   );
 };
 
-const CartSummary = () => {
+export const CartSummary = () => {
   const { uniqueItems, totalCount } = useCart();
 
   const totalPrice = uniqueItems.reduce(
